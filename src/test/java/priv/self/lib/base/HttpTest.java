@@ -8,8 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 public class HttpTest {
+
     @Test
-    public void selectTest() throws IOException {
+    public void postTest() throws IOException {
         Http http = new Http();
         http.addHeaders(new HashMap<String, String>(){{ put("Content-type", "application/json"); }});
         String result = http.post("http://localhost/project/jk/www/api/web/jky/test", "{\"asd\":\"1\"}");
@@ -19,4 +20,5 @@ public class HttpTest {
         System.out.println("ResponseHeaders: " + header);
         System.out.println("ResponseContent: " + result);
     }
+
 }
